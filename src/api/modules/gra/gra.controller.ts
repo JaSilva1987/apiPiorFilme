@@ -4,11 +4,12 @@ import { GRAService } from "./gra.service";
 import { HttpExceptionDto } from "src/api/filters/http-exception.dto";
 import { GRAFilmesEntity } from "src/database/entity/grafilmes.entity";
 import { GRAFilmesDTO } from "./dto/gra.dto";
+import { CsvService } from "src/service/impCSV.service";
 
 @ApiTags("Golden Raspberry Awards.")
 @Controller("GoldenRaspberryAwards")
 export class GRAController {
-  constructor(private graService: GRAService) {}
+  constructor(private graService: GRAService, private readonly csvService: CsvService) {}
 
   @Get()
   @ApiOperation({ summary: "Busca filmes" })
@@ -27,5 +28,15 @@ export class GRAController {
   @ApiResponse({ status: 401, type: HttpExceptionDto })
   async postRanking(@Body() filme: GRAFilmesDTO): Promise<GRAFilmesEntity> {
     return this.graService.create(filme);
+  }
+
+  @Post('csv')
+  @ApiOperation({ summary: "Importa filmes de arquivo CSV" })
+  @ApiResponse({ status: 200 })
+  @ApiResponse({ status: 400, type: HttpExceptionDto })
+  @ApiResponse({ status: 401, type: HttpExceptionDto })
+  async importarCSV() {
+    await this.csvService.importarDadosDoCSV();
+    return { message: 'Importação concluída com sucesso.' };
   }
 }

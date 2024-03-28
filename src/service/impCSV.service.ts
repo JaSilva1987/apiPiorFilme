@@ -15,7 +15,7 @@ export class CsvService {
 
   async importarDadosDoCSV(): Promise<void> {
     const caminhoDoArquivo = path.join(__dirname, '../database/arquivoImportacao/arquivo.csv');
-
+console.log(caminhoDoArquivo)
     const stream = fs.createReadStream(caminhoDoArquivo);
     const csvStream = csv.parse({ headers: true });
 

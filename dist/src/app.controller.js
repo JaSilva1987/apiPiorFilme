@@ -19,9 +19,9 @@ let AppController = class AppController {
     }
 };
 __decorate([
-    (0, common_1.Get)('/running'),
-    (0, swagger_1.ApiOperation)({ summary: 'Version running' }),
-    (0, swagger_1.ApiResponse)({ status: 200, description: 'Endpoint executed with sucess' }),
+    (0, common_1.Get)("/running"),
+    (0, swagger_1.ApiOperation)({ summary: "Version running" }),
+    (0, swagger_1.ApiResponse)({ status: 200, description: "Endpoint executed with sucess" }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)

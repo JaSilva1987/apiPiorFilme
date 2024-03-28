@@ -4,5 +4,5 @@ export declare class GRAFilmesDTO {
     TITLE: string;
     STUDIOS: string;
     PRODUCERS: string;
-    WINNER?: boolean;
+    WINNER: boolean;
 }
