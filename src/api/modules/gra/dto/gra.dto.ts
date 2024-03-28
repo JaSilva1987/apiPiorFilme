@@ -17,5 +17,5 @@ export class GRAFilmesDTO {
   PRODUCERS: string;
 
   @ApiProperty({ description: "Vencedor", type: Boolean })
-  WINNER?: boolean;
+  WINNER: boolean;
 }
