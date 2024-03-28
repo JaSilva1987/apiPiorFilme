@@ -20,7 +20,6 @@ DatabaseModule = __decorate([
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'sqlite',
                 database: ':memory:',
-                autoLoadEntities: true,
                 entities: [grafilmes_entity_1.GRAFilmesEntity],
                 synchronize: true,
             }),

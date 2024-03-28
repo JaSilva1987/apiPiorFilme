@@ -9,7 +9,6 @@ import { GRAFilmesEntity } from './entity/grafilmes.entity';
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: ':memory:',
-      autoLoadEntities: true,
       entities: [GRAFilmesEntity],
       synchronize: true,
     }),

@@ -8,13 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ApiModule = void 0;
 const common_1 = require("@nestjs/common");
+const core_1 = require("@nestjs/core");
 const gra_module_1 = require("./modules/gra/gra.module");
+const logging_interceptor_1 = require("./interceptors/logging.interceptor");
 let ApiModule = class ApiModule {
 };
 ApiModule = __decorate([
     (0, common_1.Module)({
         controllers: [],
-        providers: [],
+        providers: [{ provide: core_1.APP_INTERCEPTOR, useClass: logging_interceptor_1.LoggingInterceptor }],
         imports: [gra_module_1.GRAModule],
     })
 ], ApiModule);

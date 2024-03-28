@@ -31,7 +31,7 @@ __decorate([
 ], GRAController.prototype, "getAll", null);
 GRAController = __decorate([
     (0, swagger_1.ApiTags)("Golden Raspberry Awards."),
-    (0, common_1.Controller)("Golden Raspberry Awards."),
+    (0, common_1.Controller)("GoldenRaspberryAwards"),
     __metadata("design:paramtypes", [gra_service_1.GRAService])
 ], GRAController);
 exports.GRAController = GRAController;

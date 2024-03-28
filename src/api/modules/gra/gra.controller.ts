@@ -3,7 +3,7 @@ import { ApiOperation, ApiResponse, ApiTags } from "@nestjs/swagger";
 import { GRAService } from "./gra.service";
 
 @ApiTags("Golden Raspberry Awards.")
-@Controller("Golden Raspberry Awards.")
+@Controller("GoldenRaspberryAwards")
 export class GRAController {
   constructor(private graService: GRAService) {}
 
