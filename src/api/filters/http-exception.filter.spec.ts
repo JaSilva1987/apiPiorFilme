@@ -1,8 +1,8 @@
-import { HttpException } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
-import { HttpExceptionFilter } from './http-exception.filter';
+import { HttpException } from "@nestjs/common";
+import { Test, TestingModule } from "@nestjs/testing";
+import { HttpExceptionFilter } from "./http-exception.filter";
 
-describe('SampleService', () => {
+describe("SampleService", () => {
   let filter: HttpExceptionFilter;
 
   const mockLogger = { error: jest.fn() };
@@ -10,7 +10,7 @@ describe('SampleService', () => {
   const mockContext: any = {
     switchToHttp: () => ({
       getRequest: () => ({
-        url: 'http://localhost/mock',
+        url: "http://localhost/mock",
       }),
       getResponse: () => {
         const response = {
@@ -35,11 +35,11 @@ describe('SampleService', () => {
     filter = module.get<HttpExceptionFilter>(HttpExceptionFilter);
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(filter).toBeDefined();
   });
 
-  it('should catch an exception', () => {
+  it("should catch an exception", () => {
     const exception = new HttpException(mockLogger, 500);
     console.log = () => null;
     console.error = () => null;

@@ -21,6 +21,7 @@ DatabaseModule = __decorate([
                 type: 'sqlite',
                 database: ':memory:',
                 entities: [grafilmes_entity_1.GRAFilmesEntity],
+                autoLoadEntities: true,
                 synchronize: true,
             }),
         ],

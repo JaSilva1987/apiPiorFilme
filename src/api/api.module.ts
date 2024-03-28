@@ -8,5 +8,4 @@ import { LoggingInterceptor } from "./interceptors/logging.interceptor";
   providers: [{ provide: APP_INTERCEPTOR, useClass: LoggingInterceptor }],
   imports: [GRAModule],
 })
-
 export class ApiModule {}

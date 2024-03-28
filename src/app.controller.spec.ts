@@ -1,8 +1,8 @@
-import { AppController } from './app.controller';
-import { Test, TestingModule } from '@nestjs/testing';
-import { API_VERSION } from './constants';
+import { AppController } from "./app.controller";
+import { Test, TestingModule } from "@nestjs/testing";
+import { API_VERSION } from "./constants";
 
-describe('AppController', () => {
+describe("AppController", () => {
   let appController: AppController;
 
   beforeEach(async () => {
@@ -13,10 +13,10 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('Execute Running Version', () => {
+  describe("Execute Running Version", () => {
     it('should return text "Running Version" variable value', () => {
       expect(appController.getVersionEndpoint()).toContain(
-        `Running Version ${API_VERSION}`,
+        `Running Version ${API_VERSION}`
       );
     });
   });

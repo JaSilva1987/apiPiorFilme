@@ -1,8 +1,8 @@
-export declare class GRAFilmesEntity {
+export declare class GRAFilmesDTO {
     ID?: number;
     YEAR: string;
     TITLE: string;
     STUDIOS: string;
     PRODUCERS: string;
-    WINNER: boolean;
+    WINNER?: boolean;
 }

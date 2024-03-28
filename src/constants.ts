@@ -1,8 +1,8 @@
-import * as path from 'path';
-import * as fs from 'fs';
+import * as path from "path";
+import * as fs from "fs";
 
 const pkg = JSON.parse(
-  fs.readFileSync(path.resolve('package.json')).toString('utf-8'),
+  fs.readFileSync(path.resolve("package.json")).toString("utf-8")
 );
 
 const API_NAME = pkg.name;

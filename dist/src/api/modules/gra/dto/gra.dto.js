@@ -9,36 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GRAFilmesEntity = void 0;
-const typeorm_1 = require("typeorm");
-let GRAFilmesEntity = class GRAFilmesEntity {
-};
+exports.GRAFilmesDTO = void 0;
+const swagger_1 = require("@nestjs/swagger");
+class GRAFilmesDTO {
+}
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)(),
+    (0, swagger_1.ApiProperty)({ description: "Código indentificador", type: Number }),
     __metadata("design:type", Number)
-], GRAFilmesEntity.prototype, "ID", void 0);
+], GRAFilmesDTO.prototype, "ID", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "year" }),
+    (0, swagger_1.ApiProperty)({ description: "Ano de Lançamento", type: String }),
     __metadata("design:type", String)
-], GRAFilmesEntity.prototype, "YEAR", void 0);
+], GRAFilmesDTO.prototype, "YEAR", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "title" }),
+    (0, swagger_1.ApiProperty)({ description: "Título do Filme", type: String }),
     __metadata("design:type", String)
-], GRAFilmesEntity.prototype, "TITLE", void 0);
+], GRAFilmesDTO.prototype, "TITLE", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "studios" }),
+    (0, swagger_1.ApiProperty)({ description: "Estudio", type: String }),
     __metadata("design:type", String)
-], GRAFilmesEntity.prototype, "STUDIOS", void 0);
+], GRAFilmesDTO.prototype, "STUDIOS", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "producers" }),
+    (0, swagger_1.ApiProperty)({ description: "Produtores", type: String }),
     __metadata("design:type", String)
-], GRAFilmesEntity.prototype, "PRODUCERS", void 0);
+], GRAFilmesDTO.prototype, "PRODUCERS", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "winner" }),
+    (0, swagger_1.ApiProperty)({ description: "Vencedor", type: Boolean }),
     __metadata("design:type", Boolean)
-], GRAFilmesEntity.prototype, "WINNER", void 0);
-GRAFilmesEntity = __decorate([
-    (0, typeorm_1.Entity)("filmes")
-], GRAFilmesEntity);
-exports.GRAFilmesEntity = GRAFilmesEntity;
-//# sourceMappingURL=grafilmes.entity.js.map
+], GRAFilmesDTO.prototype, "WINNER", void 0);
+exports.GRAFilmesDTO = GRAFilmesDTO;
+//# sourceMappingURL=gra.dto.js.map

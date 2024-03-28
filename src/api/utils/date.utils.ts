@@ -1,10 +1,10 @@
-import { isNull } from 'lodash';
-import { ISearchWithDateDto } from '../interfaces/search.interface';
+import { isNull } from "lodash";
+import { ISearchWithDateDto } from "../interfaces/search.interface";
 
 export class DateUtils {
   public static isFilteredDate(
     data: Date,
-    filterParam: ISearchWithDateDto,
+    filterParam: ISearchWithDateDto
   ): boolean {
     if (
       DateUtils.isNotEmptyDate(filterParam?.firstDate) &&

@@ -18,5 +18,5 @@ export class GRAFilmesEntity {
   PRODUCERS: string;
 
   @Column({ name: "winner" })
-  WINNER: string;
+  WINNER: boolean;
 }

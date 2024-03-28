@@ -1,4 +1,4 @@
-import { isNull, isEmpty } from 'lodash';
+import { isNull, isEmpty } from "lodash";
 
 export class ListUtils {
   public static isEmptyList<T>(list: Array<T>): boolean {

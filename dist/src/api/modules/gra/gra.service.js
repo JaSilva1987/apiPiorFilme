@@ -24,6 +24,9 @@ let GRAService = class GRAService {
     async findAll() {
         return this.repository.find();
     }
+    async create(filme) {
+        return await this.repository.save(filme);
+    }
 };
 GRAService = __decorate([
     (0, common_1.Injectable)(),
