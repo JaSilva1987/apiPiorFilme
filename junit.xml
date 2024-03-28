@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jests tests" tests="15" failures="0" errors="0" time="14.995">
+  <testsuite name="DateUtils" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="6.451" tests="2">
+    <testcase classname="DateUtils should be invalid" name="DateUtils should be invalid" time="0.006">
+    </testcase>
+    <testcase classname="DateUtils should be false filter" name="DateUtils should be false filter" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="DateUtils.isFilteredDate" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="6.599" tests="10">
+    <testcase classname="DateUtils.isFilteredDate should be false, filterParam is null" name="DateUtils.isFilteredDate should be false, filterParam is null" time="0.005">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with firstDate and lastDate" name="DateUtils.isFilteredDate should be true, filterParam with firstDate and lastDate" time="0.001">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate null" name="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate null" time="0.001">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate out of date" name="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate out of date" time="0">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with firstDate" name="DateUtils.isFilteredDate should be true, filterParam with firstDate" time="0">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate great than date" name="DateUtils.isFilteredDate should be false, filterParam with firstDate great than date" time="0">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with date great than lastDate" name="DateUtils.isFilteredDate should be false, filterParam with date great than lastDate" time="0.001">
+    </testcase>
+    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with lastDate" name="DateUtils.isFilteredDate should be true, filterParam with lastDate" time="0.001">
+    </testcase>
+    <testcase classname="DateUtils.isNotEmptyDate should be empty data" name="DateUtils.isNotEmptyDate should be empty data" time="0.001">
+    </testcase>
+    <testcase classname="DateUtils.isNotEmptyDate should be not empty data" name="DateUtils.isNotEmptyDate should be not empty data" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="SampleService" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="12.893" tests="2">
+    <testcase classname="SampleService should be defined" name="SampleService should be defined" time="0.018">
+    </testcase>
+    <testcase classname="SampleService should catch an exception" name="SampleService should catch an exception" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="AppController" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="14.521" tests="1">
+    <testcase classname="AppController Execute Running Version should return text &quot;Running Version&quot; variable value" name="AppController Execute Running Version should return text &quot;Running Version&quot; variable value" time="0.018">
+    </testcase>
+  </testsuite>
+</testsuites>
