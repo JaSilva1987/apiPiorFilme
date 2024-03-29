@@ -6,7 +6,8 @@ export default async (): Promise<Config> => {
     moduleFileExtensions: ['js', 'json', 'ts'],
     rootDir: 'src',
     moduleNameMapper: {
-      'ˆ@/(.*)$': '<rootDir>/App/$1',
+      '^@/(.*)$': '<rootDir>/src/$1',
+      '^src/database/entity/(.*)$': '<rootDir>/database/entity/$1'
     },
     testRegex: '.spec.ts$',
     transform: { '^.+\\.(t|j)s$': 'ts-jest' },

@@ -49,6 +49,10 @@ Isso iniciará o servidor e a aplicação estará acessível em http://localhost
 
 Tambem é possivel acessar via POSTMAN importando o arquivo swagger-spec.json gerado na raiz da aplicação.
 
+Caso precise dentro da pasta database/arquivoImportacao encontra-se o CSV para realizar a importação do arquivo.
+
+O endpoint POST Importa filmes de arquivo CSV, basta informar a URL de um arquivo CSV que o usuário de execução da aplicação tenha permissão de leitura para que a tabela filmes iniciazada no start da aplicação seja populada.
+
 ## Testes
 
 ```bash

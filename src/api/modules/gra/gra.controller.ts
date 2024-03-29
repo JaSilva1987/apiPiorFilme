@@ -1,10 +1,10 @@
 import { Body, Controller, Get, Param, Post } from "@nestjs/common";
 import { ApiBody, ApiOperation, ApiParam, ApiResponse, ApiTags } from "@nestjs/swagger";
 import { GRAService } from "./gra.service";
-import { HttpExceptionDto } from "src/api/filters/http-exception.dto";
 import { GRAFilmesEntity } from "src/database/entity/grafilmes.entity";
 import { GRAFilmesDTO } from "./dto/gra.dto";
 import { ProducerInterval } from "src/api/interfaces/gra.interface";
+import { HttpExceptionDto } from "../../filters/http-exception.dto";
 
 @ApiTags("Golden Raspberry Awards")
 @Controller("GoldenRaspberryAwards")

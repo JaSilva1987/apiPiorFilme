@@ -1,41 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jests tests" tests="15" failures="0" errors="0" time="14.995">
-  <testsuite name="DateUtils" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="6.451" tests="2">
-    <testcase classname="DateUtils should be invalid" name="DateUtils should be invalid" time="0.006">
+<testsuites name="jests tests" tests="3" failures="3" errors="0" time="4.177">
+  <testsuite name="GRAModule" errors="0" failures="3" skipped="0" timestamp="2024-03-29T00:46:08" time="4.091" tests="3">
+    <testcase classname="GRAModule should be defined" name="GRAModule should be defined" time="0.025">
+      <failure>Error: Nest can&apos;t resolve dependencies of the GRAFilmesEntityRepository (?). Please make sure that the argument DataSource at index [0] is available in the TypeOrmModule context.
+
+Potential solutions:
+- Is TypeOrmModule a valid NestJS module?
+- If DataSource is a provider, is it part of the current TypeOrmModule?
+- If DataSource is exported from a separate @Module, is that module imported within TypeOrmModule?
+  @Module({
+    imports: [ /* the Module containing DataSource */ ]
+  })
+
+    at TestingInjector.lookupComponentInParentModules (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:241:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:194:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-injector.js:16:45)
+    at async resolveParam (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:116:38)
+    at async Promise.all (index 0)
+    at async TestingInjector.resolveConstructorParams (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:131:27)
+    at async TestingInjector.loadInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:57:13)
+    at async TestingInjector.loadProvider (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:84:9)
+    at async TestingInjector.lookupComponentInImports (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:275:17)
+    at async TestingInjector.lookupComponentInParentModules (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:239:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:194:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-injector.js:16:45)
+    at async resolveParam (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:116:38)
+    at async Promise.all (index 0)
+    at async TestingInjector.resolveConstructorParams (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:131:27)
+    at async TestingInjector.loadInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:57:13)
+    at async TestingInjector.loadProvider (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:84:9)
+    at async Promise.all (index 3)
+    at async TestingInstanceLoader.createInstancesOfProviders (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:47:9)
+    at async /Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:32:13
+    at async Promise.all (index 1)
+    at async TestingInstanceLoader.createInstances (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:31:9)
+    at async TestingInstanceLoader.createInstancesOfDependencies (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:21:9)
+    at async TestingInstanceLoader.createInstancesOfDependencies (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-instance-loader.js:14:9)
+    at async TestingModuleBuilder.compile (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-module.builder.js:47:9)
+    at async Object.&lt;anonymous&gt; (/Users/josesilva/Documents/Projetos/apiPiorFilme/src/api/modules/gra/gra.module.spec.ts:12:14)</failure>
     </testcase>
-    <testcase classname="DateUtils should be false filter" name="DateUtils should be false filter" time="0.001">
+    <testcase classname="GRAModule should import GRAController" name="GRAModule should import GRAController" time="0.016">
+      <failure>Error: Nest can&apos;t resolve dependencies of the GRAFilmesEntityRepository (?). Please make sure that the argument DataSource at index [0] is available in the TypeOrmModule context.
+
+Potential solutions:
+- Is TypeOrmModule a valid NestJS module?
+- If DataSource is a provider, is it part of the current TypeOrmModule?
+- If DataSource is exported from a separate @Module, is that module imported within TypeOrmModule?
+  @Module({
+    imports: [ /* the Module containing DataSource */ ]
+  })
+
+    at TestingInjector.lookupComponentInParentModules (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:241:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:194:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-injector.js:16:45)
+    at async resolveParam (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:116:38)
+    at async Promise.all (index 0)
+    at async TestingInjector.resolveConstructorParams (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:131:27)
+    at async TestingInjector.loadInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:57:13)
+    at async TestingInjector.loadProvider (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:84:9)
+    at async TestingInjector.lookupComponentInImports (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:275:17)
+    at async TestingInjector.lookupComponentInParentModules (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:239:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:194:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-injector.js:16:45)
+    at async resolveParam (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:116:38)
+    at async Promise.all (index 0)
+    at async TestingInjector.resolveConstructorParams (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:131:27)
+    at async TestingInjector.loadInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:57:13)
+    at async TestingInjector.loadProvider (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:84:9)
+    at async Promise.all (index 3)
+    at async TestingInstanceLoader.createInstancesOfProviders (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:47:9)
+    at async /Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:32:13
+    at async Promise.all (index 1)
+    at async TestingInstanceLoader.createInstances (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:31:9)
+    at async TestingInstanceLoader.createInstancesOfDependencies (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:21:9)
+    at async TestingInstanceLoader.createInstancesOfDependencies (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-instance-loader.js:14:9)
+    at async TestingModuleBuilder.compile (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-module.builder.js:47:9)
+    at async Object.&lt;anonymous&gt; (/Users/josesilva/Documents/Projetos/apiPiorFilme/src/api/modules/gra/gra.module.spec.ts:12:14)</failure>
     </testcase>
-  </testsuite>
-  <testsuite name="DateUtils.isFilteredDate" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="6.599" tests="10">
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam is null" name="DateUtils.isFilteredDate should be false, filterParam is null" time="0.005">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with firstDate and lastDate" name="DateUtils.isFilteredDate should be true, filterParam with firstDate and lastDate" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate null" name="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate null" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate out of date" name="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate out of date" time="0">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with firstDate" name="DateUtils.isFilteredDate should be true, filterParam with firstDate" time="0">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate great than date" name="DateUtils.isFilteredDate should be false, filterParam with firstDate great than date" time="0">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with date great than lastDate" name="DateUtils.isFilteredDate should be false, filterParam with date great than lastDate" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with lastDate" name="DateUtils.isFilteredDate should be true, filterParam with lastDate" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isNotEmptyDate should be empty data" name="DateUtils.isNotEmptyDate should be empty data" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isNotEmptyDate should be not empty data" name="DateUtils.isNotEmptyDate should be not empty data" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="SampleService" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="12.893" tests="2">
-    <testcase classname="SampleService should be defined" name="SampleService should be defined" time="0.018">
-    </testcase>
-    <testcase classname="SampleService should catch an exception" name="SampleService should catch an exception" time="0.013">
-    </testcase>
-  </testsuite>
-  <testsuite name="AppController" errors="0" failures="0" skipped="0" timestamp="2024-03-27T22:43:05" time="14.521" tests="1">
-    <testcase classname="AppController Execute Running Version should return text &quot;Running Version&quot; variable value" name="AppController Execute Running Version should return text &quot;Running Version&quot; variable value" time="0.018">
+    <testcase classname="GRAModule should import GRAService" name="GRAModule should import GRAService" time="0.016">
+      <failure>Error: Nest can&apos;t resolve dependencies of the GRAFilmesEntityRepository (?). Please make sure that the argument DataSource at index [0] is available in the TypeOrmModule context.
+
+Potential solutions:
+- Is TypeOrmModule a valid NestJS module?
+- If DataSource is a provider, is it part of the current TypeOrmModule?
+- If DataSource is exported from a separate @Module, is that module imported within TypeOrmModule?
+  @Module({
+    imports: [ /* the Module containing DataSource */ ]
+  })
+
+    at TestingInjector.lookupComponentInParentModules (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:241:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:194:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-injector.js:16:45)
+    at async resolveParam (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:116:38)
+    at async Promise.all (index 0)
+    at async TestingInjector.resolveConstructorParams (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:131:27)
+    at async TestingInjector.loadInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:57:13)
+    at async TestingInjector.loadProvider (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:84:9)
+    at async TestingInjector.lookupComponentInImports (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:275:17)
+    at async TestingInjector.lookupComponentInParentModules (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:239:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:194:33)
+    at async TestingInjector.resolveComponentInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-injector.js:16:45)
+    at async resolveParam (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:116:38)
+    at async Promise.all (index 0)
+    at async TestingInjector.resolveConstructorParams (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:131:27)
+    at async TestingInjector.loadInstance (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:57:13)
+    at async TestingInjector.loadProvider (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/injector.js:84:9)
+    at async Promise.all (index 3)
+    at async TestingInstanceLoader.createInstancesOfProviders (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:47:9)
+    at async /Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:32:13
+    at async Promise.all (index 1)
+    at async TestingInstanceLoader.createInstances (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:31:9)
+    at async TestingInstanceLoader.createInstancesOfDependencies (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/core/injector/instance-loader.js:21:9)
+    at async TestingInstanceLoader.createInstancesOfDependencies (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-instance-loader.js:14:9)
+    at async TestingModuleBuilder.compile (/Users/josesilva/Documents/Projetos/apiPiorFilme/node_modules/@nestjs/testing/testing-module.builder.js:47:9)
+    at async Object.&lt;anonymous&gt; (/Users/josesilva/Documents/Projetos/apiPiorFilme/src/api/modules/gra/gra.module.spec.ts:12:14)</failure>
     </testcase>
   </testsuite>
 </testsuites>
