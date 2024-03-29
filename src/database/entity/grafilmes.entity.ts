@@ -3,20 +3,20 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 @Entity("filmes")
 export class GRAFilmesEntity {
   @PrimaryGeneratedColumn()
-  ID?: number;
+  id?: number;
 
   @Column({ name: "year" })
-  YEAR: string;
+  year: string;
 
   @Column({ name: "title" })
-  TITLE: string;
+  title: string;
 
   @Column({ name: "studios" })
-  STUDIOS: string;
+  studios: string;
 
   @Column({ name: "producers" })
-  PRODUCERS: string;
+  producers: string;
 
   @Column({ name: "winner" })
-  WINNER: boolean;
+  winner: string;
 }

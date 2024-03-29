@@ -3,11 +3,10 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { GRAFilmesEntity } from "src/database/entity/grafilmes.entity";
 import { GRAController } from "./gra.controller";
 import { GRAService } from "./gra.service";
-import { CsvService } from "src/service/impCSV.service";
 
 @Module({
   imports: [TypeOrmModule.forFeature([GRAFilmesEntity])],
-  providers: [GRAService, CsvService],
+  providers: [GRAService],
   controllers: [GRAController],
 })
 export class GRAModule {}

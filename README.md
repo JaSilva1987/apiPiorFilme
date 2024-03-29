@@ -5,72 +5,64 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  <p align="center">A aplicação foi desenvolvida utilizando uma estrutura NESTJS com NodeJS. Essa combinação proporciona velocidade e uma aplicação robusta, eficiente e escalonável.</p>
+  
+## Descrição
 
-## Description
+Olá e bem-vindo ao README da nossa aplicação! Aqui estão as instruções detalhadas sobre como você pode configurar e executar a aplicação localmente em seu ambiente de desenvolvimento.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Pré-Requisito
 
-## Installation
+Antes de começar, certifique-se de ter instalado em sua máquina local:
+
+* <a href="http://nodejs.org" target="_blank">Node.js</a> - versão LTS recomendada
+* GIT - para baixar o conteúdo dessa API
+* <a href="https://docs.nestjs.com/cli/overview" target="_blank">Nest CLI</a> - (opcional, mas recomendado para desenvolvimento com NestJS)
+* SQLLITE - Precisamos ter o SQLLITE habilitado localmente para executar em memória.
+
+## Configuração do Ambiente
 
 ```bash
-$ npm install
+$ git clone https://github.com/JaSilva1987/apiPiorFilme.git
 ```
 
-## Running the app
+## Instalação das dependências
 
 ```bash
-# development
-$ npm run start
+$ cd apiPiorFilme
+npm install
+```
 
-# watch mode
-$ npm run start:dev
+## Executando a Aplicação
 
-# production mode
+```bash
+# Gerando o Build da Aplicação
+$ npm run build
+
+# Executando em modo Produtivo
 $ npm run start:prod
 ```
 
-## Test
+Ao Executar o sistema irá criar a base de dados e a tabela necessário para executar a aplicação.
+
+Isso iniciará o servidor e a aplicação estará acessível em http://localhost:3000/api por padrão.
+
+Tambem é possivel acessar via POSTMAN importando o arquivo swagger-spec.json gerado na raiz da aplicação.
+
+## Testes
 
 ```bash
-# unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
 ```
 
-## Support
+## Verificando cobertura de testes
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+```bash
+$ npm run test:cov
+```
 
 ## Por que TYPESCRIPT
 
