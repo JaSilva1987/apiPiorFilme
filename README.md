@@ -15,10 +15,10 @@ Olá e bem-vindo ao README da nossa aplicação! Aqui estão as instruções det
 
 Antes de começar, certifique-se de ter instalado em sua máquina local:
 
-* <a href="http://nodejs.org" target="_blank">Node.js</a> - versão LTS recomendada
-* GIT - para baixar o conteúdo dessa API
-* <a href="https://docs.nestjs.com/cli/overview" target="_blank">Nest CLI</a> - (opcional, mas recomendado para desenvolvimento com NestJS)
-* SQLLITE - Precisamos ter o SQLLITE habilitado localmente para executar em memória.
+- <a href="http://nodejs.org" target="_blank">Node.js</a> - versão LTS recomendada
+- GIT - para baixar o conteúdo dessa API
+- <a href="https://docs.nestjs.com/cli/overview" target="_blank">Nest CLI</a> - (opcional, mas recomendado para desenvolvimento com NestJS)
+- SQLLITE - Precisamos ter o SQLLITE habilitado localmente para executar em memória.
 
 ## Configuração do Ambiente
 
@@ -45,7 +45,7 @@ $ npm run start:prod
 
 Ao Executar o sistema irá criar a base de dados e a tabela necessário para executar a aplicação.
 
-Isso iniciará o servidor e a aplicação estará acessível em http://localhost:3000/api por padrão.
+Isso iniciará o servidor e a aplicação estará acessível em http://localhost:3005/api por padrão.
 
 Tambem é possivel acessar via POSTMAN importando o arquivo swagger-spec.json gerado na raiz da aplicação.
 
@@ -74,15 +74,14 @@ Mais conhecido como um superset do Javascript, ou seja, um conjunto de ferrament
 
 ## Comparativo
 
-|           JavaScript            |           TypeScript            |
-|---------------------------------|---------------------------------|
-|       Dinâmicamente Tipada      | 	TypeScript é um superconjunto de Javascript que compila em JavaScript simples.   |
-|       Não há necessidade de tipagem      |     Apresenta os erros em tempo de codificação |
-|      JavaScript é uma linguagem baseada em intérprete para adicionar interatividade a uma página da web      |     Feedback mais rápido   |
-|      Javascript é uma linguagem de script.      |     TypeScript é uma linguagem de programação orientada a objetos.   |
-|      Javascript não precisa de um compilador. Ele roda no navegador da web.   |      navegador da web.	TypeScript requer um compilador TypeScript para ser convertido em um arquivo JavaScript.   |
-|       JavaScript não é puramente orientado a objetos. É baseado em protótipo. Não possui interfaces.      |     TypeScript é uma linguagem de programação orientada a objetos e é baseada em classes. Pode usar classes, herança, interfaces e modificadores.   |
-|       JavaScript é executado no lado do cliente.      |     	O TypeScript é executado no lado do cliente e também no lado do servidor.   |
-|       Javascript não possui verificação de tipo estático.	TypeScript possui verificação de tipo estático.   |     	TypeScript possui verificação de tipo estático.   |
-|       Javascript não permite suporte a módulos.    |     O Typescript pode importar arquivos e módulos.   |
-
+| JavaScript                                                                                          | TypeScript                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dinâmicamente Tipada                                                                                | TypeScript é um superconjunto de Javascript que compila em JavaScript simples.                                                                |
+| Não há necessidade de tipagem                                                                       | Apresenta os erros em tempo de codificação                                                                                                    |
+| JavaScript é uma linguagem baseada em intérprete para adicionar interatividade a uma página da web  | Feedback mais rápido                                                                                                                          |
+| Javascript é uma linguagem de script.                                                               | TypeScript é uma linguagem de programação orientada a objetos.                                                                                |
+| Javascript não precisa de um compilador. Ele roda no navegador da web.                              | navegador da web. TypeScript requer um compilador TypeScript para ser convertido em um arquivo JavaScript.                                    |
+| JavaScript não é puramente orientado a objetos. É baseado em protótipo. Não possui interfaces.      | TypeScript é uma linguagem de programação orientada a objetos e é baseada em classes. Pode usar classes, herança, interfaces e modificadores. |
+| JavaScript é executado no lado do cliente.                                                          | O TypeScript é executado no lado do cliente e também no lado do servidor.                                                                     |
+| Javascript não possui verificação de tipo estático. TypeScript possui verificação de tipo estático. | TypeScript possui verificação de tipo estático.                                                                                               |
+| Javascript não permite suporte a módulos.                                                           | O Typescript pode importar arquivos e módulos.                                                                                                |
