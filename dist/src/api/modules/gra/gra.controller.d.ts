@@ -11,5 +11,4 @@ export declare class GRAController {
         max: ProducerInterval[];
     }>;
     postRanking(filme: GRAFilmesDTO): Promise<GRAFilmesEntity>;
-    importarCSV(filePath: string): Promise<String>;
 }

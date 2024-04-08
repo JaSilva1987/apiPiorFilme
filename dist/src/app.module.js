@@ -13,7 +13,6 @@ const app_controller_1 = require("./app.controller");
 const api_module_1 = require("./api/api.module");
 const nest_winston_1 = require("nest-winston");
 const terminus_1 = require("@nestjs/terminus");
-const database_module_1 = require("./database/database.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -25,7 +24,6 @@ AppModule = __decorate([
             }),
             nest_winston_1.WinstonModule.forRoot({}),
             terminus_1.TerminusModule,
-            database_module_1.DatabaseModule,
             api_module_1.ApiModule,
         ],
         controllers: [app_controller_1.AppController],

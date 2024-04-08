@@ -6,6 +6,7 @@ const fs_1 = require("fs");
 const http_exception_filter_1 = require("./api/filters/http-exception.filter");
 const app_module_1 = require("./app.module");
 const constants_1 = require("./constants");
+const gra_service_1 = require("./api/modules/gra/gra.service");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule, {
         logger: ["log", "error", "warn", "debug"],
@@ -20,7 +21,10 @@ async function bootstrap() {
     (0, fs_1.writeFileSync)("./swagger-spec.json", JSON.stringify(document));
     app.useGlobalFilters(new http_exception_filter_1.HttpExceptionFilter());
     app.enableCors();
-    await app.listen(3000);
+    const graService = app.get(gra_service_1.GRAService);
+    const filePath = "src/database/arquivoImportacao/arquivo.csv";
+    await graService.impFilesCSV(filePath);
+    await app.listen(3005);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

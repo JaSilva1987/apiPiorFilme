@@ -1,55 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jests tests" tests="21" failures="0" errors="0" time="10.452">
-  <testsuite name="DateUtils" errors="0" failures="0" skipped="0" timestamp="2024-03-29T00:57:23" time="7.016" tests="2">
-    <testcase classname="DateUtils should be invalid" name="DateUtils should be invalid" time="0.012">
+<testsuites name="jests tests" tests="4" failures="0" errors="0" time="2.911">
+  <testsuite name="GRAController" errors="0" failures="0" skipped="0" timestamp="2024-04-08T22:16:45" time="2.856" tests="4">
+    <testcase classname="GRAController should be defined" name="GRAController should be defined" time="0.017">
     </testcase>
-    <testcase classname="DateUtils should be false filter" name="DateUtils should be false filter" time="0.001">
+    <testcase classname="GRAController getAll should return array of movies" name="GRAController getAll should return array of movies" time="0.009">
     </testcase>
-  </testsuite>
-  <testsuite name="DateUtils.isFilteredDate" errors="0" failures="0" skipped="0" timestamp="2024-03-29T00:57:23" time="7.579" tests="10">
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam is null" name="DateUtils.isFilteredDate should be false, filterParam is null" time="0.005">
+    <testcase classname="GRAController getProducerIntervals should return min and max producer intervals" name="GRAController getProducerIntervals should return min and max producer intervals" time="0.006">
     </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with firstDate and lastDate" name="DateUtils.isFilteredDate should be true, filterParam with firstDate and lastDate" time="0.042">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate null" name="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate null" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate out of date" name="DateUtils.isFilteredDate should be false, filterParam with firstDate and lastDate out of date" time="0.02">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with firstDate" name="DateUtils.isFilteredDate should be true, filterParam with firstDate" time="0.003">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with firstDate great than date" name="DateUtils.isFilteredDate should be false, filterParam with firstDate great than date" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be false, filterParam with date great than lastDate" name="DateUtils.isFilteredDate should be false, filterParam with date great than lastDate" time="0">
-    </testcase>
-    <testcase classname="DateUtils.isFilteredDate should be true, filterParam with lastDate" name="DateUtils.isFilteredDate should be true, filterParam with lastDate" time="0.001">
-    </testcase>
-    <testcase classname="DateUtils.isNotEmptyDate should be empty data" name="DateUtils.isNotEmptyDate should be empty data" time="0.002">
-    </testcase>
-    <testcase classname="DateUtils.isNotEmptyDate should be not empty data" name="DateUtils.isNotEmptyDate should be not empty data" time="0.004">
-    </testcase>
-  </testsuite>
-  <testsuite name="GRAService" errors="0" failures="0" skipped="0" timestamp="2024-03-29T00:57:23" time="8.981" tests="6">
-    <testcase classname="GRAService should be defined" name="GRAService should be defined" time="0.027">
-    </testcase>
-    <testcase classname="GRAService findAll should return an array of movies" name="GRAService findAll should return an array of movies" time="0.019">
-    </testcase>
-    <testcase classname="GRAService create should create a movie" name="GRAService create should create a movie" time="0.011">
-    </testcase>
-    <testcase classname="GRAService findProducerIntervals should return min and max producer intervals" name="GRAService findProducerIntervals should return min and max producer intervals" time="0.013">
-    </testcase>
-    <testcase classname="GRAService findProducerIntervals should handle empty results" name="GRAService findProducerIntervals should handle empty results" time="0.015">
-    </testcase>
-    <testcase classname="GRAService findProducerIntervals should handle errors" name="GRAService findProducerIntervals should handle errors" time="0.023">
-    </testcase>
-  </testsuite>
-  <testsuite name="AppController" errors="0" failures="0" skipped="0" timestamp="2024-03-29T00:57:23" time="8.595" tests="1">
-    <testcase classname="AppController Execute Running Version should return text &quot;Running Version&quot; variable value" name="AppController Execute Running Version should return text &quot;Running Version&quot; variable value" time="0.02">
-    </testcase>
-  </testsuite>
-  <testsuite name="SampleService" errors="0" failures="0" skipped="0" timestamp="2024-03-29T00:57:23" time="8.632" tests="2">
-    <testcase classname="SampleService should be defined" name="SampleService should be defined" time="0.016">
-    </testcase>
-    <testcase classname="SampleService should catch an exception" name="SampleService should catch an exception" time="0.016">
+    <testcase classname="GRAController postRanking should create a movie" name="GRAController postRanking should create a movie" time="0.005">
     </testcase>
   </testsuite>
 </testsuites>

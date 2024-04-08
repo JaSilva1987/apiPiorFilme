@@ -5,7 +5,6 @@ import { GRAController } from "./gra.controller";
 import { GRAService } from "./gra.service";
 
 @Module({
-  imports: [TypeOrmModule.forFeature([GRAFilmesEntity])],
   providers: [GRAService],
   controllers: [GRAController],
 })

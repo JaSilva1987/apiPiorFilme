@@ -1,13 +1,12 @@
-import { GRAFilmesEntity } from "src/database/entity/grafilmes.entity";
-import { Repository, UpdateResult } from "typeorm";
-import { GRAFilmesDTO } from "./dto/gra.dto";
 import { ProducerInterval } from "src/api/interfaces/gra.interface";
+import { GRAFilmesEntity } from "src/database/entity/grafilmes.entity";
+import { GRAFilmesDTO } from "./dto/gra.dto";
 export declare class GRAService {
     private repository;
-    constructor(repository: Repository<GRAFilmesEntity>);
+    constructor();
     findAll(): Promise<GRAFilmesEntity[]>;
     create(filme: GRAFilmesDTO): Promise<GRAFilmesEntity>;
-    update(id: number, filme: GRAFilmesDTO): Promise<UpdateResult>;
+    update(id: number, filme: GRAFilmesDTO): Promise<any>;
     findProducerIntervals(): Promise<{
         min: ProducerInterval[];
         max: ProducerInterval[];

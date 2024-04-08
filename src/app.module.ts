@@ -4,7 +4,6 @@ import { AppController } from "./app.controller";
 import { ApiModule } from "./api/api.module";
 import { WinstonModule } from "nest-winston";
 import { TerminusModule } from "@nestjs/terminus";
-import { DatabaseModule } from "./database/database.module";
 
 @Module({
   imports: [
@@ -14,7 +13,6 @@ import { DatabaseModule } from "./database/database.module";
     }),
     WinstonModule.forRoot({}),
     TerminusModule,
-    DatabaseModule,
     ApiModule,
   ],
   controllers: [AppController],

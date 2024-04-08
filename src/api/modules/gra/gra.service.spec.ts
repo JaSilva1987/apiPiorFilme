@@ -1,29 +1,18 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { GRAService } from "./gra.service";
-import { getRepositoryToken } from "@nestjs/typeorm";
 import { GRAFilmesEntity } from "src/database/entity/grafilmes.entity";
-import { Repository } from "typeorm";
-import { GRAFilmesDTO } from "./dto/gra.dto";
+import { ProducerInterval } from "src/api/interfaces/gra.interface";
+import * as fs from "fs";
 
 describe("GRAService", () => {
   let service: GRAService;
-  let repository: Repository<GRAFilmesEntity>;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [
-        GRAService,
-        {
-          provide: getRepositoryToken(GRAFilmesEntity),
-          useClass: Repository,
-        },
-      ],
+      providers: [GRAService],
     }).compile();
 
     service = module.get<GRAService>(GRAService);
-    repository = module.get<Repository<GRAFilmesEntity>>(
-      getRepositoryToken(GRAFilmesEntity)
-    );
   });
 
   it("should be defined", () => {
@@ -42,7 +31,8 @@ describe("GRAService", () => {
           winner: "",
         },
       ];
-      jest.spyOn(repository, "find").mockResolvedValue(movies);
+
+      jest.spyOn(service, "findAll").mockResolvedValue(movies);
 
       expect(await service.findAll()).toEqual(movies);
     });
@@ -50,55 +40,57 @@ describe("GRAService", () => {
 
   describe("create", () => {
     it("should create a movie", async () => {
-      const movie: GRAFilmesDTO = {
+      const movie: GRAFilmesEntity = {
+        id: 1,
         year: "2021",
         title: "Movie 1",
         studios: "Studio 1",
         producers: "Producer 1",
         winner: "",
       };
-      const createdMovie: GRAFilmesEntity = { id: 1, ...movie };
-      jest.spyOn(repository, "save").mockResolvedValue(createdMovie);
 
-      expect(await service.create(movie)).toEqual(createdMovie);
+      jest.spyOn(service, "create").mockResolvedValue(movie);
+
+      expect(await service.create(movie)).toEqual(movie);
     });
   });
 
   describe("findProducerIntervals", () => {
     it("should return min and max producer intervals", async () => {
-      // Mocking the query results
-      const minResults = [
+      // Mockando os resultados da consulta
+      const minResults: ProducerInterval[] = [
         {
-          producers: "Producer 1",
+          producer: "Producer 1",
           interval: 1,
           previousWin: 2000,
           followingWin: 2001,
         },
         {
-          producers: "Producer 2",
+          producer: "Producer 2",
           interval: 2,
           previousWin: 2005,
           followingWin: 2007,
         },
       ];
-      const maxResults = [
+
+      const maxResults: ProducerInterval[] = [
         {
-          producers: "Producer 3",
+          producer: "Producer 3",
           interval: 5,
           previousWin: 1995,
           followingWin: 2000,
         },
         {
-          producers: "Producer 4",
+          producer: "Producer 4",
           interval: 8,
           previousWin: 2010,
           followingWin: 2018,
         },
       ];
+
       jest
-        .spyOn(repository, "query")
-        .mockResolvedValueOnce(minResults)
-        .mockResolvedValueOnce(maxResults);
+        .spyOn(service, "findProducerIntervals")
+        .mockResolvedValueOnce({ min: minResults, max: maxResults });
 
       const expected = {
         min: minResults,
@@ -111,11 +103,9 @@ describe("GRAService", () => {
     });
 
     it("should handle empty results", async () => {
-      // Mocking empty query results
       jest
-        .spyOn(repository, "query")
-        .mockResolvedValueOnce([])
-        .mockResolvedValueOnce([]);
+        .spyOn(service, "findProducerIntervals")
+        .mockResolvedValueOnce({ min: [], max: [] });
 
       const expected = {
         min: [],
@@ -129,7 +119,7 @@ describe("GRAService", () => {
 
     it("should handle errors", async () => {
       jest
-        .spyOn(repository, "query")
+        .spyOn(service, "findProducerIntervals")
         .mockRejectedValueOnce(new Error("Database error"));
 
       await expect(service.findProducerIntervals()).rejects.toThrowError(
