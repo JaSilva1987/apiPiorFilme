@@ -18,7 +18,6 @@ Antes de começar, certifique-se de ter instalado em sua máquina local:
 - <a href="http://nodejs.org" target="_blank">Node.js</a> - versão LTS recomendada
 - GIT - para baixar o conteúdo dessa API
 - <a href="https://docs.nestjs.com/cli/overview" target="_blank">Nest CLI</a> - (opcional, mas recomendado para desenvolvimento com NestJS)
-- SQLLITE - Precisamos ter o SQLLITE habilitado localmente para executar em memória.
 
 ## Configuração do Ambiente
 
