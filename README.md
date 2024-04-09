@@ -46,7 +46,9 @@ Ao Executar o sistema irá criar a base de dados e a tabela necessário para exe
 
 Tambem é possivel acessar via POSTMAN importando o arquivo swagger-spec.json gerado na raiz da aplicação.
 
-Durante a inicialização a aplicação irá importar automaticamente os dados do CSV, o caminho do CSV está na função bootstrap executada na inicialização
+Durante a inicialização a aplicação irá importar automaticamente os dados do CSV, o caminho do CSV está na função bootstrap executada na inicialização.
+
+A Aplicação utiliza o NEBD um banco de dados NoSQL incorporado, escrito em JavaScript puro para o Node.js.
 
 ## Testes
 
